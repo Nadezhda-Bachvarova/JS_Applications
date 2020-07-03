@@ -20,6 +20,10 @@ describe('Main', () => {
         it('should return undefined for non-number second param', () => {
             expect(lookupChar(testString, '1')).to.equal(undefined);
         });
+
+        it('should return undefined if second param is not integer', () => {
+            expect(lookupChar(testString, 1.25)).to.equal(undefined);
+        });
     });
 
     describe('Out of range', () => {
